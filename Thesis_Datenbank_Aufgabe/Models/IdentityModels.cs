@@ -65,7 +65,6 @@ namespace Thesis_Datenbank_Aufgabe.Models
     {
         [Key]
         [Required]
-
         [Display(Name = "Thesisnummer")]
         public int Id { get; set; }
         [Required]
