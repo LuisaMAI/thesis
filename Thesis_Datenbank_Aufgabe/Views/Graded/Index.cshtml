@@ -1,0 +1,223 @@
+﻿@model IEnumerable<Thesis_Datenbank_Aufgabe.Models.Thesis>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bachelor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Master)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Registration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Filing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Typ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Summary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Strenghts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weaknesses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evaluation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContentVal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LayoutVal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StructureVal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StyleVal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LiteraturVal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DifficultyVal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoveltyVal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RichnessVal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContentWt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LayoutWt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StructureWt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StyleWt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LiteratureWt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DifficultyWt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoveltyWt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RichnessWt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastModified)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bachelor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Master)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Registration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Filing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Typ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Summary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Strenghts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weaknesses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evaluation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContentVal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LayoutVal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StructureVal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StyleVal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LiteraturVal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DifficultyVal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoveltyVal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RichnessVal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContentWt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LayoutWt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StructureWt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StyleWt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LiteratureWt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DifficultyWt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoveltyWt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RichnessWt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastModified)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
