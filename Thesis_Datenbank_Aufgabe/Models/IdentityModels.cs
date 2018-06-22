@@ -160,7 +160,7 @@ namespace Thesis_Datenbank_Aufgabe.Models
         public int Grade { get; set; }
 
         [Required]
-        [Display(Name = "Letzte Änderung am Datensatz")]
+        [Display(Name = "Letzte Änderung")]
         public DateTime LastModified { get; set; }
         // zu jeder Thesis gibt es nur einen Betreuer
         public virtual Supervisor supervisor { get; set; }

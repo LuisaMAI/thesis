@@ -18,13 +18,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Anwendungsname", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Thesis Verwaltung", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
-                    <li>@Html.ActionLink("zur Bewertung abgegeben", "Index", "Index")</li>
-                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("offene Themen", "Index", "Open")</li>
+                   
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -34,7 +34,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Meine ASP.NET-Anwendung</p>
+            <p>&copy; @DateTime.Now.Year - Advanced Web Programming an der Julius-Maximilians-Universität Würzburg</p>
         </footer>
     </div>
 
