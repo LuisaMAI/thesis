@@ -48,6 +48,10 @@ namespace Thesis_Datenbank_Aufgabe.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Title,Description,Bachelor,Master,Status,StudentName,StudentEmail,StudentID,Registration,Filing,Typ,Summary,Strenghts,Weaknesses,Evaluation,ContentVal,LayoutVal,StructureVal,StyleVal,LiteraturVal,DifficultyVal,NoveltyVal,RichnessVal,ContentWt,LayoutWt,StructureWt,StyleWt,LiteratureWt,DifficultyWt,NoveltyWt,RichnessWt,Grade,LastModified")] Thesis thesis)
         {
+            if (System.Web.HttpContext.Current.User.Identity.IsAuthenticated == false)
+            {
+                throw new Exception("Bitte zum erstellen einer Thesis einloggen bzw. registrieren");
+            }
             if (ModelState.IsValid)
             {
                 db.ThesisDb.Add(thesis);
@@ -61,6 +65,10 @@ namespace Thesis_Datenbank_Aufgabe.Controllers
         // GET: Registered/Edit/5
         public ActionResult Edit(int? id)
         {
+            if (Environment.UserDomainName != db.ThesisDb.Find(id).Creator)
+            {
+                throw new Exception("Es dürfen nur selbst angelegte Themen geaendert werden");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -109,6 +117,10 @@ namespace Thesis_Datenbank_Aufgabe.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if (Environment.UserDomainName != db.ThesisDb.Find(id).Creator)
+            {
+                throw new Exception("Es dürfen nur selbst angelegte Themen geloescht werden");
+            }
             Thesis thesis = db.ThesisDb.Find(id);
             db.ThesisDb.Remove(thesis);
             db.SaveChanges();

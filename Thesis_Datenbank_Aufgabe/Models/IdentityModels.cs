@@ -163,6 +163,8 @@ namespace Thesis_Datenbank_Aufgabe.Models
         [Display(Name = "Letzte Änderung")]
         public DateTime LastModified { get; set; }
         // zu jeder Thesis gibt es nur einen Betreuer
+        public String Creator { get; } = Environment.UserDomainName;
+
         public virtual Supervisor supervisor { get; set; }
         // einen Thesis gehört zu genau einem Programm
         public virtual Programme Programme { get; set; }
