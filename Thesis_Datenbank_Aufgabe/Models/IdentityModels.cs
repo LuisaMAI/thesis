@@ -161,7 +161,7 @@ namespace Thesis_Datenbank_Aufgabe.Models
 
         [Required]
         [Display(Name = "Letzte Änderung")]
-        public DateTime LastModified { get; set; }
+        public DateTime LastModified { get; set; } = DateTime.Now;
         // zu jeder Thesis gibt es nur einen Betreuer
         public String Creator { get; } = Environment.UserDomainName;
 
