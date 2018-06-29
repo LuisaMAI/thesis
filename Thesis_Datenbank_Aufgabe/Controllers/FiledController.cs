@@ -85,7 +85,7 @@ namespace Thesis_Datenbank_Aufgabe.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Thesis thesis = db.ThesisDb.Find(id);
-            if (thesis == null)-
+            if (thesis == null)
             {
                 return HttpNotFound();
             }
