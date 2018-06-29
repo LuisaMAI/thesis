@@ -20,10 +20,10 @@ namespace Thesis_Datenbank_Aufgabe.Controllers
 
             //hier nur abgegebene Thesen übergeben
             List<Thesis> thesisliste = new List<Thesis>();
-            string abgegeben = "abgegeben";
+           
             foreach (Thesis thesis in db.ThesisDb.ToList())
             {
-                if (thesis.Status.GetType().ToString().Equals(abgegeben))
+                if (thesis.Status.Equals(Models.Status.abgegeben))
                 {
                     thesisliste.Add(thesis);
                 }
@@ -76,16 +76,17 @@ namespace Thesis_Datenbank_Aufgabe.Controllers
         // GET: Filed/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (Environment.UserDomainName != db.ThesisDb.Find(id).Creator)
+            /*
+            if (Environment.UserDomainName != db.ThesisDb.Find(id).supervisor.Id)
             {
                 throw new Exception("Es dürfen nur selbst angelegte Themen geaendert werden");
             }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
+            } */
             Thesis thesis = db.ThesisDb.Find(id);
-            if (thesis == null)-
+            if (thesis == null)
             {
                 return HttpNotFound();
             }

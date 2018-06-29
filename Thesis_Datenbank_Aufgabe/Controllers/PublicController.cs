@@ -17,7 +17,18 @@ namespace Thesis_Datenbank_Aufgabe.Controllers
         // GET: Public
         public ActionResult Index()
         {
-            return View(db.ThesisDb.ToList());
+            //hier freien und reservierten Thesen übergeben
+            List<Thesis> thesisliste = new List<Thesis>();
+            
+            foreach (Thesis thesis in db.ThesisDb.ToList())
+            {
+                if (thesis.Status.Equals(Models.Status.frei) && thesis.Status.Equals(Models.Status.reserviert))
+
+                {
+                    thesisliste.Add(thesis);
+                }
+            }
+            return View(thesisliste);
         }
 
         // GET: Public/Details/5

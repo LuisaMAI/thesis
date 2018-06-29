@@ -14,9 +14,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
+       <th>
+           @Html.DisplayNameFor(model => model.supervisor)
+       </th>
         <th>
             @Html.DisplayNameFor(model => model.Bachelor)
         </th>
@@ -33,9 +33,6 @@
             @Html.DisplayNameFor(model => model.StudentID)
         </th>
   
-        <th>
-            @Html.DisplayNameFor(model => model.LastModified)
-        </th>
         <th></th>
     </tr>
 
@@ -45,8 +42,8 @@
             @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
+            <a href="mailto:model.supervisor.mail">@Html.DisplayFor(modelItem => item.supervisor)</a>
+</td>
         <td>
             @Html.DisplayFor(modelItem => item.Bachelor)
         </td>
@@ -57,21 +54,17 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.StudentName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StudentEmail)
-        </td>
+            <a href="mailto:model.StudentEmail">@Html.DisplayFor(modelItem => item.StudentName)</a>
+</td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.StudentID)
         </td>
+        
         <td>
-            @Html.DisplayFor(modelItem => item.LastModified)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id }) |
-            @Html.ActionLink("Create", "Create", new {id =item.Id})
+            @Html.ActionLink("Bearbeiten", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Löschen", "Delete", new { id=item.Id }) |
+            @Html.ActionLink("Hinzufügen", "Create", new {id =item.Id})
         </td>
     </tr>
 }

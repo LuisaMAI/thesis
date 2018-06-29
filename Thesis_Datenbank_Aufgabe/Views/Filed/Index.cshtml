@@ -13,14 +13,14 @@
             @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
-            // Name des Betreuers und hinterlegt mit der E-Mail
+            
+             @Html.DisplayNameFor(model => model.Creator)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.StudentName)
-            // <a href="mailto:model.StudentEmail"></a>
+          @Html.DisplayNameFor(model => model.StudentName)
         </th>
         
         <th>
@@ -32,9 +32,7 @@
         <th> 
             @Html.DisplayNameFor(model => model.Typ)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastModified)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -42,6 +40,10 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            
+            <a href="models.Supervisor.Mail"> @Html.DisplayFor(modelItem => item.supervisor)</a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Description)
@@ -56,7 +58,7 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.StudentName)
+            <a href="model.StudentEmail">@Html.DisplayFor(modelItem => item.StudentName)</a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.StudentEmail)
@@ -74,9 +76,6 @@
             @Html.DisplayFor(modelItem => item.Typ)
         </td>
         
-        <td>
-            @Html.DisplayFor(modelItem => item.LastModified)
-        </td>
         <td>
             @Html.ActionLink("Bearbeiten", "Edit", new { id=item.Id })
            

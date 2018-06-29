@@ -17,7 +17,16 @@ namespace Thesis_Datenbank_Aufgabe.Controllers
         // GET: Registered
         public ActionResult Index()
         {
-            return View(db.ThesisDb.ToList());
+            //hier nur angemeldete Thesen übergeben
+            List<Thesis> thesisliste = new List<Thesis>();
+            foreach (Thesis thesis in db.ThesisDb.ToList())
+            {
+                if (thesis.Status.Equals(Models.Status.angemeldet))
+                {
+                    thesisliste.Add(thesis);
+                }
+            }
+            return View(thesisliste);
         }
 
         // GET: Registered/Details/5

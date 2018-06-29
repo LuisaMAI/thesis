@@ -1,13 +1,13 @@
 ﻿@model Thesis_Datenbank_Aufgabe.Models.Thesis
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Create";
 }
 
-<h2>Bearbeiten einer abgegebenen Thesis</h2>
+<h2>Create</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
@@ -15,8 +15,6 @@
         <h4>Thesis</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
-
         <div class="form-group">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -52,7 +50,6 @@
                 </div>
             </div>
         </div>
-       
 
         <div class="form-group">
             @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -270,16 +267,13 @@
             </div>
         </div>
 
-        
         <div class="form-group">
             @Html.LabelFor(model => model.Grade, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                // Hier muss ein Notenvorschlag berechnet werden
                 @Html.EditorFor(model => model.Grade, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Grade, "", new { @class = "text-danger" })
             </div>
         </div>
-
 
         <div class="form-group">
             @Html.LabelFor(model => model.LastModified, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -291,34 +285,16 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Speichern" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Zurück zur Übersicht", "Index")
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-<link rel="stylesheet" href="~/Content/kendo/2018.2.620/kendo.common-bootstrap.core.min.css.map" />
-<link rel="stylesheet" href="~/Content/kendo/2018.2.620/kendo.bootstrap.min.css" />
-<script src="~/Scripts/kendo/2018.2.620/cultures/kendo.culture.de-DE.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $document("#Registration").kendoDatePicker({
-                culture: "de-DE",
-                value: new Date()
-            });
-            $(document).ready(function () {
-                $document("#Filing").kendoDatePicker({
-                    culture: "de-DE",
-                    value: new Date()
-                });})
-                $("#Status").kendoDropDownList();
-                $("#Typ").kendoDropDownList();
-        })</script>
 }

@@ -95,4 +95,16 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+<link rel="stylesheet" href="~/Content/kendo/2018.2.620/kendo.common-bootstrap.core.min.css.map" />
+<link rel="stylesheet" href="~/Content/kendo/2018.2.620/kendo.bootstrap.min.css" />
+<script src="~/Scripts/kendo/2018.2.620/cultures/kendo.culture.de-DE.min.js"></script>
+
+<script>
+        $(document).ready(function () {
+            $document("#Registration").kendate({
+                culture: "de-DE",
+                value: new Date()
+            });
+           
+        })</script>
 }

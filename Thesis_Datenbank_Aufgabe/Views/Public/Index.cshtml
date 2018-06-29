@@ -6,6 +6,7 @@
 @{
     Layout = null;
 }
+
 <h2>Alle noch nicht angemeldeten Thesis-Themen</h2>
 
 
@@ -15,7 +16,7 @@
             @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.supervisor)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Bachelor)
@@ -32,7 +33,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Grade)
         </th>
-        <th></th>
+        
     </tr>
 
 @foreach (var item in Model) {
@@ -41,7 +42,7 @@
             @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Description)
+            @Html.DisplayFor(modelItem => item.supervisor)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Bachelor)

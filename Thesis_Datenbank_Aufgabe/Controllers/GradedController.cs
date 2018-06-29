@@ -17,7 +17,17 @@ namespace Thesis_Datenbank_Aufgabe.Controllers
         // GET: Graded
         public ActionResult Index()
         {
-            return View(db.ThesisDb.ToList());
+            //hier nur bewerteten Thesen übergeben
+            List<Thesis> thesisliste = new List<Thesis>();
+            
+            foreach (Thesis thesis in db.ThesisDb.ToList())
+            {
+                if (thesis.Status.Equals(Models.Status.bewertet))
+                {
+                    thesisliste.Add(thesis);
+                }
+            }
+            return View(thesisliste);
         }
 
         // GET: Graded/Details/5

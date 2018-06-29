@@ -218,6 +218,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FiledController.cs" />
     <Compile Include="Controllers\GradedController.cs" />
+    <Compile Include="Controllers\HilfeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OpenController.cs" />
@@ -3392,6 +3393,11 @@
     <Content Include="Scripts\kendo\2018.2.620\cultures\kendo.culture.aa-ET.min.js.map" />
     <Content Include="Scripts\kendo\2018.2.620\cultures\kendo.culture.aa-ER.min.js.map" />
     <Content Include="Scripts\kendo\2018.2.620\cultures\kendo.culture.aa-DJ.min.js.map" />
+    <Content Include="Views\Hilfe\Create.cshtml" />
+    <Content Include="Views\Hilfe\Delete.cshtml" />
+    <Content Include="Views\Hilfe\Details.cshtml" />
+    <Content Include="Views\Hilfe\Edit.cshtml" />
+    <Content Include="Views\Hilfe\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

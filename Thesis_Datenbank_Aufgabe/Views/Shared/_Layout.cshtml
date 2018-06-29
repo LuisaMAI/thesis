@@ -24,7 +24,11 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
                     <li>@Html.ActionLink("offene Themen", "Index", "Open")</li>
-                   
+                   <li>@Html.ActionLink("angemeldete Thesen", "Index","Registered")</li>
+                    <li>@Html.ActionLink("abgegebene Thesen", "Index", "Filed")</li>
+                    <li>@Html.ActionLink("bewertete Thesen", "Index", "Graded")</li>
+                    <li>@Html.ActionLink("oeffentliche Thesis", "Index", "Public")</li>
+                    <li>@Html.ActionLink("Hilfe", "Create", "Hilfe" ) </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
